@@ -1,20 +1,20 @@
 @font-face {
-  font-family: 'Josefin_Bold';
-  src: url('/fonts/JosefinSans-Bold.ttf') format('truetype');
+  font-family: 'Poppins_Bold';
+  src: url('/fonts/Poppins-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Josefin_Light';
-  src: url('/fonts/JosefinSans-Light.ttf') format('truetype');
+  font-family: 'Poppins_Light';
+  src: url('/fonts/Poppins-Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Josefin_Semi_Bold';
-  src: url('/fonts/JosefinSans-SemiBold.ttf') format('truetype');
+  font-family: 'Poppins_ExtraLight';
+  src: url('/fonts/Poppins-ExtraLight.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Josefin_Bold', Arial, sans-serif;
+  font-family: 'Poppins_Bold', Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
