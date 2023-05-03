@@ -1,0 +1,201 @@
+/* Basic styles for your website */
+
+/* Typography and layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+}
+
+/* Logo styles */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Navigation styles */
+nav {
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #f4a460;
+}
+
+.hamburger {
+  display: none;
+  color: #fff;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+h1, h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Call to action button styles */
+.cta-btn {
+  background-color: #f4a460;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer-links a, .social-media a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.footer-links a:hover, .social-media a:hover {
+  color: #f4a460;
+}
+
+/* Responsive styles for mobile and iPad screens */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: #333;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Carousel styles */
+.carousel {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.carousel-caption {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.carousel-item {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.carousel img {
+  max-height: 300px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.carousel-btn {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: fit-content;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* Default light mode styles */
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  .carousel-caption {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
