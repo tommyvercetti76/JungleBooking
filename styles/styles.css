@@ -1,8 +1,20 @@
-/* Basic styles for your website */
+@font-face {
+  font-family: 'Josefin_Bold';
+  src: url('/fonts/JosefinSans-Bold.ttf') format('truetype');
+}
 
-/* Typography and layout */
+@font-face {
+  font-family: 'Josefin_Light';
+  src: url('/fonts/JosefinSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin_Semi_Bold';
+  src: url('/fonts/JosefinSans-SemiBold.ttf') format('truetype');
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Josefin_Bold', Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -10,7 +22,6 @@ body {
   color: #333333;
 }
 
-/* Header styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -19,13 +30,11 @@ header {
   background-color: #333;
 }
 
-/* Logo styles */
 .logo img {
   height: 50px;
   width: auto;
 }
 
-/* Navigation styles */
 nav {
   position: relative;
 }
@@ -52,7 +61,6 @@ nav {
   color: #fff;
 }
 
-/* Hero section styles */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.jpg');
   background-size: cover;
@@ -75,7 +83,6 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Call to action button styles */
 .cta-btn {
   background-color: #f4a460;
   color: white;
@@ -84,7 +91,6 @@ p {
   border-radius: 5px;
 }
 
-/* Footer styles */
 footer {
   padding: 1rem;
   text-align: center;
@@ -102,7 +108,6 @@ footer {
   color: #f4a460;
 }
 
-/* Responsive styles for mobile and iPad screens */
 @media screen and (max-width: 768px) {
   .nav-links {
     display: none;
@@ -124,7 +129,6 @@ footer {
   }
 }
 
-/* Carousel styles */
 .carousel {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -133,7 +137,50 @@ footer {
 .carousel-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #222;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-card {
+    max-width: 280px;
+  }
+}
+
+.carousel-card:hover {
+  transform: scale(0.98);
+}
+
+.carousel-image-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .carousel-caption {
@@ -176,13 +223,11 @@ footer {
   border-radius: 50%;
 }
 
-/* Default light mode styles */
 body {
   background-color: #ffffff;
   color: #333333;
 }
 
-/* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #333333;
