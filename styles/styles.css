@@ -174,14 +174,6 @@ footer {
   object-fit: cover;
 }
 
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  border-radius: 5px;
-  margin-top: 1rem;
-  text-align: left;
-}
-
 .carousel-control {
   cursor: pointer;
 }
@@ -209,6 +201,26 @@ footer {
   width: fit-content;
 }
 
+.carousel-item {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
 /* Default light mode styles */
 body {
   background-color: #ffffff;
@@ -224,11 +236,8 @@ body {
 
   .carousel-caption {
     background: rgba(255, 255, 255, 0.5);
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(255, 255, 255, 0.5);
+    color: #333333;
   }
 }
+
 
