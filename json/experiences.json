@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "images": [
+            "/images/Tiger1.png",
+            "./images/Tiger2.png",
+            "./images/Tiger3.png",
+            "./images/Tiger4.png"
+        ],
+        "title": "Royals of Bharat",
+        "description": "There is nothing on Earth quite like a wild Tiger.",
+        "buttonTitle": "Enquire Now",
+        "linkedPage": "royals.html"
+    },
+    {
+        "id": 2,
+        "images": [
+            "images/experience2_1.jpg",
+            "images/experience2_2.jpg",
+            "images/experience2_3.jpg",
+            "images/experience2_4.jpg"
+        ],
+        "title": "Explore Natural Ecosystem Safely",
+        "description": "Expert guides, home to Bears, Wolves, Eagles, Deer, and other incredible species. Learn about the Boreal Forest Ecosystem.",
+        "buttonTitle": "Enquire Now",
+        "linkedPage": "ecosystem.html"
+    },
+    {
+        "id": 3,
+        "images": [
+            "images/experience3_1.jpg",
+            "images/experience3_2.jpg",
+            "images/experience3_3.jpg",
+            "images/experience3_4.jpg"
+        ],
+        "title": "Support Essential Conservation",
+        "description": "Protect nature and habitat, experience unforgettable beauty, and receive a custom fine art photography piece.",
+        "buttonTitle": "Enquire Now",
+        "linkedPage": "conservation.html"
+    }
+]
