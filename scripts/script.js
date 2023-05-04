@@ -41,35 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function createCarouselItem(carouselInner, experience, index) {
   const carouselItemId = `carousel-${index + 1}`;
-
-  const carouselRadio = document.createElement('input');
-  carouselRadio.type = 'radio';
-  carouselRadio.name = 'carousel';
-  carouselRadio.id = carouselItemId;
-  if (index === 0) {
-    carouselRadio.checked = true;
-  }
-  carouselInner.appendChild(carouselRadio);
-
   const carouselItem = document.createElement('div');
   carouselItem.classList.add('carousel-item');
-
   const subCarouselId = `sub-carousel-${index + 1}`;
-
-  const subCarouselRadio = document.createElement('input');
-  subCarouselRadio.type = 'radio';
-  subCarouselRadio.name = subCarouselId;
-  subCarouselRadio.id = `${subCarouselId}-1`;
-  subCarouselRadio.checked = true;
-  carouselItem.appendChild(subCarouselRadio);
-
-  experience.images.slice(1).forEach((img, idx) => {
-    const subCarouselRadio = document.createElement('input');
-    subCarouselRadio.type = 'radio';
-    subCarouselRadio.name = subCarouselId;
-    subCarouselRadio.id = `${subCarouselId}-${idx + 2}`;
-    carouselItem.appendChild(subCarouselRadio);
-  });
 
   const carouselImageContainer = document.createElement('div');
   carouselImageContainer.classList.add('carousel-image-container');
