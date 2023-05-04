@@ -41,27 +41,23 @@ function createCarouselItem(carouselInner, experience, index) {
   const carouselItemId = `carousel-${index + 1}`;
   const carouselItem = document.createElement('div');
   carouselItem.classList.add('carousel-item');
-  const subCarouselId = `sub-carousel-${index + 1}`;
 
   const carouselImageContainer = document.createElement('div');
   carouselImageContainer.classList.add('carousel-image-container');
   carouselItem.appendChild(carouselImageContainer);
 
-  experience.images.forEach((img, idx) => {
+  experience.images.forEach((img) => {
     const carouselImage = document.createElement('img');
     carouselImage.classList.add('carousel-image');
     carouselImage.src = img;
     carouselImage.alt = experience.title;
+    carouselImage.style.width = '100%'; // Set image width to fill the carousel card
     carouselImageContainer.appendChild(carouselImage);
   });
 
-  const carouselContent = document.createElement('div');
-  carouselContent.style.position = 'relative';
-  carouselItem.appendChild(carouselContent);
-
   const carouselCaption = document.createElement('div');
   carouselCaption.classList.add('carousel-caption');
-  carouselContent.appendChild(carouselCaption);
+  carouselItem.appendChild(carouselCaption);
 
   const title = document.createElement('h5');
   title.textContent = experience.title;
