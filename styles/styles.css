@@ -148,7 +148,7 @@ footer {
   padding: 1rem;
 }
 
-.carousel-card {
+.carousel-item {
   flex: 0 0 auto;
   scroll-snap-align: start;
   display: flex;
@@ -239,5 +239,4 @@ body {
     color: #333333;
   }
 }
-
 
