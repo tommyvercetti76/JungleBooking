@@ -57,6 +57,7 @@ function createCarouselItem(carouselInner, experience, index) {
 
   const carouselCaption = document.createElement('div');
   carouselCaption.classList.add('carousel-caption');
+  carouselCaption.style.position = 'relative'; // Add position relative to the carousel caption
   carouselItem.appendChild(carouselCaption);
 
   const title = document.createElement('h5');
