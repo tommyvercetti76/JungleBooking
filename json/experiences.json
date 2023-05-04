@@ -3,9 +3,9 @@
         "id": 1,
         "images": [
             "/images/Tiger1.png",
-            "./images/Tiger2.png",
-            "./images/Tiger3.png",
-            "./images/Tiger4.png"
+            "/images/Tiger2.png",
+            "/images/Tiger3.png",
+            "/images/Tiger4.png"
         ],
         "title": "Royals of Bharat",
         "description": "There is nothing on Earth quite like a wild Tiger.",
