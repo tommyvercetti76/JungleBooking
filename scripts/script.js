@@ -43,7 +43,6 @@ function createCarouselItem(carouselInner, experience, index) {
   const carouselItemId = `carousel-${index + 1}`;
 
   const carouselRadio = document.createElement('input');
-  carouselRadio.classList.add('carousel-radio');
   carouselRadio.type = 'radio';
   carouselRadio.name = 'carousel';
   carouselRadio.id = carouselItemId;
@@ -58,7 +57,6 @@ function createCarouselItem(carouselInner, experience, index) {
   const subCarouselId = `sub-carousel-${index + 1}`;
 
   const subCarouselRadio = document.createElement('input');
-  subCarouselRadio.classList.add('sub-carousel-radio');
   subCarouselRadio.type = 'radio';
   subCarouselRadio.name = subCarouselId;
   subCarouselRadio.id = `${subCarouselId}-1`;
@@ -67,7 +65,6 @@ function createCarouselItem(carouselInner, experience, index) {
 
   experience.images.slice(1).forEach((img, idx) => {
     const subCarouselRadio = document.createElement('input');
-    subCarouselRadio.classList.add('sub-carousel-radio');
     subCarouselRadio.type = 'radio';
     subCarouselRadio.name = subCarouselId;
     subCarouselRadio.id = `${subCarouselId}-${idx + 2}`;
