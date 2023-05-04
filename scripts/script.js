@@ -23,9 +23,7 @@ function initInnerCarousels() {
 
 document.addEventListener('DOMContentLoaded', initInnerCarousels);
 
-
 // Get The JSON for parsing
-
 document.addEventListener('DOMContentLoaded', () => {
   fetch('/json/experiences.json')
     .then((response) => response.json())
@@ -57,9 +55,13 @@ function createCarouselItem(carouselInner, experience, index) {
     carouselImageContainer.appendChild(carouselImage);
   });
 
+  const carouselContent = document.createElement('div');
+  carouselContent.style.position = 'relative';
+  carouselItem.appendChild(carouselContent);
+
   const carouselCaption = document.createElement('div');
   carouselCaption.classList.add('carousel-caption');
-  carouselItem.appendChild(carouselCaption);
+  carouselContent.appendChild(carouselCaption);
 
   const title = document.createElement('h5');
   title.textContent = experience.title;
@@ -75,12 +77,12 @@ function createCarouselItem(carouselInner, experience, index) {
   button.textContent = experience.buttonTitle;
   carouselCaption.appendChild(button);
 
-  const calendarIcon = document.createElement('i'); // Create an <i> element for the calendar icon
-  calendarIcon.className = 'fas fa-calendar-alt'; // Add Font Awesome classes for the calendar icon
-  calendarIcon.style.position = 'absolute'; // Set the icon's position property to absolute
-  calendarIcon.style.right = '1rem'; // Set the icon's right margin
-  calendarIcon.style.bottom = '1rem'; // Set the icon's bottom margin
-  carouselCaption.appendChild(calendarIcon); // Append the icon to the carousel caption
+  const calendarIcon = document.createElement('i');
+  calendarIcon.className = 'fas fa-calendar-alt';
+  calendarIcon.style.position = 'absolute';
+  calendarIcon.style.right = '1rem';
+  calendarIcon.style.bottom = '1rem';
+  carouselCaption.appendChild(calendarIcon);
 
   carouselInner.appendChild(carouselItem);
 }
