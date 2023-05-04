@@ -55,7 +55,6 @@ function createCarouselItem(carouselInner, experience, index) {
     carouselImage.src = img;
     carouselImage.alt = experience.title;
     carouselImageContainer.appendChild(carouselImage);
-    carouselImage.style.order = idx + 1;
   });
 
   const carouselCaption = document.createElement('div');

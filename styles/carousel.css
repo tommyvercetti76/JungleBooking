@@ -22,7 +22,9 @@
     position: relative;
     padding: 1rem;
     margin: 1rem;
+    min-height: 450px; /* Add a min-height property to keep the text below the image carousel */
   }
+  
   
   .carousel-image-container {
     width: 100%;
