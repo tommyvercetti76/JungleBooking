@@ -4,11 +4,11 @@ function toggleMenu() {
 }
 
 function initInnerCarousels() {
-  const innerCarousels = document.querySelectorAll('.carousel-item .carousel-inner');
+  const innerCarousels = document.querySelectorAll('.carousel-image-container');
 
   for (const innerCarousel of innerCarousels) {
     let currentItemIndex = 0;
-    const carouselItems = innerCarousel.querySelectorAll('.carousel-item');
+    const carouselItems = innerCarousel.querySelectorAll('.carousel-image');
     const totalItems = carouselItems.length;
 
     setInterval(() => {
@@ -24,7 +24,6 @@ function initInnerCarousels() {
 document.addEventListener('DOMContentLoaded', initInnerCarousels);
 
 
-
 // Get The JSON for parsing
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       experiences.forEach((experience, index) => {
         createCarouselItem(carouselInner, experience, index);
       });
+      initInnerCarousels(); // Reinitialize inner carousels after creating carousel items
     })
     .catch((error) => console.error('Error fetching experiences:', error));
 });
@@ -56,11 +56,6 @@ function createCarouselItem(carouselInner, experience, index) {
     carouselImage.alt = experience.title;
     carouselImageContainer.appendChild(carouselImage);
     carouselImage.style.order = idx + 1;
-
-    const subCarouselLabel = document.createElement('label');
-    subCarouselLabel.classList.add('sub-carousel-control');
-    subCarouselLabel.htmlFor = `${subCarouselId}-${idx === 0 ? experience.images.length : idx}`;
-    carouselImageContainer.appendChild(subCarouselLabel);
   });
 
   const carouselCaption = document.createElement('div');
